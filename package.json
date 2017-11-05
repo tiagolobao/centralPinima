@@ -1,0 +1,30 @@
+{
+  "name": "centralpinima",
+  "version": "0.0.1",
+  "description": "A car command center with Rasperry Pi and Node.js",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagolobao/centralPinima.git"
+  },
+  "keywords": [
+    "RaspberryPi",
+    "Speech",
+    "GPIO",
+    "Car"
+  ],
+  "author": "Tiago Britto Lobão",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiagolobao/centralPinima/issues"
+  },
+  "homepage": "https://github.com/tiagolobao/centralPinima#readme"
+}
