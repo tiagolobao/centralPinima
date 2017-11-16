@@ -20,14 +20,14 @@ double Ultrassom::getDistancia(){
 ​ ​ ​ long​ travelTime​ ​= ​0;
 ​ ​ ​ long​ startTime​ ​=​ 0;
    //Send​ ​trig​ ​pulse
-   digitalWrite(trigger,​ HIGH);
+   digitalWrite(trigPin,​ HIGH);
    delayMicroseconds(onTimeMicrosseconds);
-   digitalWrite(trigger,​​ LOW);
+   digitalWrite(trigPin,​​ LOW);
    //Wait​ for​​ echo​ start
-   while(digitalRead(echo)​ ==​ 0);
+   while(digitalRead(echoPin)​ ==​ 0);
    //Wait​ for​ ​echo​ end
    startTime​ = micros();
-   while(​ ​ (digitalRead(echo)​ ​==​ ​1)​ ​ &&​ ​ (travelTime​ ​< ​timeOut)​ ​ ){
+   while(​ ​ (digitalRead(echoPin)​ ​==​ ​1)​ ​ &&​ ​ (travelTime​ ​< ​timeOut)​ ​ ){
       travelTime​​ =​ micros()​ -​ startTime;
    }
    double​ ​distance​​ =​ (double)travelTime​​ /​ 5880.0;
