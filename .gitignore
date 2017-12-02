@@ -1,0 +1,6 @@
+
+scriptsCpp/comandos.o
+scriptsCpp/teste
+
+scriptsCpp/motor/motor.o
+scriptsCpp/ultrassom/ultrassom.o
