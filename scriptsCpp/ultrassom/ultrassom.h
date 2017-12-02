@@ -1,15 +1,15 @@
 #include​ <wiringPi.h>
-#include <iostream.h>
+#include <iostream>
 
 class Ultrassom{
    private:
-   uint_8 echoPin;
-   uint_8 trigPin;
-   uint_8 onTimeMicrosseconds;
-   uint_8 timeOut;
+   int echoPin;
+   int trigPin;
+   int onTimeMicrosseconds;
+   int timeOut;
 
    public:
-   Ultrassom(uint_8 echoPin, uint_8 trigPin);
-   Ultrassom(uint_8 echoPin, uint_8 trigPin, uint_8 onTimeMicrosseconds, uint_8 timeOut);
+   Ultrassom(int echoPin, int trigPin);
+   Ultrassom(int echoPin, int trigPin, int onTimeMicrosseconds, int timeOut);
    double getDistancia();
-}
+};

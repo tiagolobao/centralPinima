@@ -1,18 +1,18 @@
 #include​ <wiringPi.h>
-#include <iostream.h>
+#include <iostream>
 
 class Motor{
    private:
-   uint_8 esquerdaHorario;
-   uint_8 esquerdaAntiHorario;
-   uint_8 direitaHorario;
-   uint_8 direitaAntiHorario;
+   int esquerdaHorario;
+   int esquerdaAntiHorario;
+   int direitaHorario;
+   int direitaAntiHorario;
 
    public:
-   Motor(uint_8 esquerdaHorario, uint_8 esquerdaAntiHorario, uint_8 direitaHorario, uint_8 direitaAntiHorario);
+   Motor(int esquerdaHorario, int esquerdaAntiHorario, int direitaHorario, int direitaAntiHorario);
    void irParaFrente();
    void irParaTras();
    void virarDireita();
    void virarEsquerda();
    void parar();
-}
+};
