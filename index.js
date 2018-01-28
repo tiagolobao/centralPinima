@@ -1,4 +1,5 @@
 /**** Webserver Setup ****/
+var shell = require('shelljs');
 var app = require('express')();
 fs = require('fs');
 app.set('view engine','ejs');
