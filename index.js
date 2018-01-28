@@ -10,6 +10,11 @@ app.get('/', function(req,res){
 	res.render("index");
 })
 
+/**** Pages Declarations ****/
+app.get('/mover', function(req,res){
+	res.render("mover");
+})
+
 app.get('/logo.png', function(req,res){
    console.log("Getting Logo Image..");
    var img = fs.readFileSync('images/pinima.png');
