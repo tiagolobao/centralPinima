@@ -1,5 +1,8 @@
 #include<wiringPi.h>
 #include<iostream>
+#include<cstdlib>
+#include<fstream>
+#include<string>
 
 class Motor{
    private:
@@ -15,4 +18,9 @@ class Motor{
    void virarDireita();
    void virarEsquerda();
    void parar();
+
+
+   private:
+   void WritePin(int GPIO, int value);
+   int ReadPin(int GPIO);
 };

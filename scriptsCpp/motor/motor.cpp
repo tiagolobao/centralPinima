@@ -9,41 +9,79 @@ Motor::Motor(int esquerdaHorario, int esquerdaAntiHorario, int direitaHorario, i
 }
 
 void Motor::irParaFrente(){
-   digitalWrite(direitaAntiHorario,HIGH);
-   digitalWrite(esquerdaHorario,HIGH);
+   this->WritePin(direitaAntiHorario,1);
+   this->WritePin(esquerdaHorario,1);
 
-   digitalWrite(direitaHorario,LOW);
-   digitalWrite(esquerdaAntiHorario,LOW);
+   this->WritePin(direitaHorario,0);
+   this->WritePin(esquerdaAntiHorario,0);
 }
 
 void Motor::irParaTras(){
-   digitalWrite(direitaAntiHorario,LOW);
-   digitalWrite(esquerdaHorario,LOW);
+   this->WritePin(direitaAntiHorario,0);
+   this->WritePin(esquerdaHorario,0);
 
-   digitalWrite(direitaHorario,HIGH);
-   digitalWrite(esquerdaAntiHorario,HIGH);
+   this->WritePin(direitaHorario,1);
+   this->WritePin(esquerdaAntiHorario,1);
 }
 
 void Motor::virarDireita(){
-   digitalWrite(direitaAntiHorario,LOW);
-   digitalWrite(esquerdaAntiHorario,LOW);
+   this->WritePin(direitaAntiHorario,0);
+   this->WritePin(esquerdaAntiHorario,0);
 
-   digitalWrite(esquerdaHorario,HIGH);
-   digitalWrite(direitaHorario,HIGH);
+   this->WritePin(esquerdaHorario,1);
+   this->WritePin(direitaHorario,1);
 }
 
 void Motor::virarEsquerda(){
-   digitalWrite(direitaAntiHorario,HIGH);
-   digitalWrite(esquerdaAntiHorario,HIGH);
+   this->WritePin(direitaAntiHorario,1);
+   this->WritePin(esquerdaAntiHorario,1);
 
-   digitalWrite(esquerdaHorario,LOW);
-   digitalWrite(direitaHorario,LOW);
+   this->WritePin(esquerdaHorario,0);
+   this->WritePin(direitaHorario,0);
 }
 
 void Motor::parar(){
-   digitalWrite(direitaAntiHorario,LOW);
-   digitalWrite(esquerdaHorario,LOW);
+   this->WritePin(direitaAntiHorario,0);
+   this->WritePin(esquerdaHorario,0);
 
-   digitalWrite(direitaHorario,LOW);
-   digitalWrite(esquerdaAntiHorario,LOW);
+   this->WritePin(direitaHorario,0);
+   this->WritePin(esquerdaAntiHorario,0);
+}
+
+
+
+
+/* COMANDOS DE GPIO */
+void WritePin(int GPIO, int value){
+   char temp[25] = "gpio write ";
+   char buff[5];
+
+   //conversões de int para string e concatenações
+   snprintf(buff, sizeof buff, "%d", GPIO);
+   strcat(temp,buff);
+   snprintf(buff, sizeof buff, "%d", value);
+   strcat(temp," ");
+   strcat(temp,buff);
+
+   //roda o comando
+   system( temp );
+}
+
+int ReadPin(int GPIO){
+   char temp[25] = "gpio read ";
+   char buff[5];
+
+   //conversões de int para string e concatenações
+   snprintf(buff, sizeof buff, "%d", GPIO);
+   strcat(temp,buff);
+
+   //roda o comando
+   fp = popen(temp, "r");
+   fgets(path,sizeof(path),fp);
+   if(path[0]=='0'){
+      return 0;
+   }
+   else if(path[0]=='1'){
+      return 1;
+   }
 }
