@@ -4,7 +4,7 @@
 all: main
 
 main: comandos.o motor.o ultrassom.o
-	g++ -o $@ $^ main -lwiringPi
+	g++ -o $@ $^ -lwiringPi
 
 clean:
 	rm *.o *.*~ *~ main
