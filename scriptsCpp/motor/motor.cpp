@@ -1,7 +1,7 @@
 #include "motor.h"
 
 
-void Motor::Motor(uint8_t esquerdaHorario, uint8_t esquerdaAntiHorario, uint8_t direitaHorario, uint8_t direitaAntiHorario){
+void Motor::Motor(int esquerdaHorario, int esquerdaAntiHorario, int direitaHorario, int direitaAntiHorario){
    this->esquerdaHorario = esquerdaHorario;
    this->esquerdaAntiHorario = esquerdaAntiHorario;
    this->direitaHorario = direitaHorario;

@@ -1,14 +1,14 @@
 #include "ultrassom.h"
 
 
-Ultrassom::Ultrassom(uint_8 echoPin, uint_8 trigPin){
+Ultrassom::Ultrassom(int echoPin, int trigPin){
    this->echoPin = echoPin;
    this->trigPin = trigPin;
    this->timeOut = 2400;
    this->onTimeMicrosseconds = 20;
 }
 
-Ultrassom::Ultrassom(uint_8 echoPin, uint_8 trigPin, uint_8 onTimeMicrosseconds, uint_8 timeOut){
+Ultrassom::Ultrassom(int echoPin, int trigPin, int onTimeMicrosseconds, int timeOut){
    this->echoPin = echoPin;
    this->trigPin = trigPin;
    this->timeOut = timeOut;
