@@ -24,22 +24,11 @@ app.get('/mover', function(req,res){
 			silent: false,
 			encoding: 'utf8'
 		};
+		console.log(comando);
+		console.log('frente');
 		//Escolha do comando
-		var output = "./scriptsCpp/teste a";
-		switch (comando) {
-			case 'esquerda':
-				output += "e";
-				break;
-			case 'direita':
-				output += "d";
-				break;
-			case 'frente':
-				output += "f";
-				break;
-			case 'parar':
-				output += "p";
-				break;
-		}
+		var output = "./scriptsCpp/teste ";
+		output += comando;
 		shell.exec(output,execOptions,function(){
 			//CALLBACK
 		});
