@@ -1,5 +1,5 @@
-#include​ <wiringPi.h>
-#include <iostream>
+//#include​<wiringPi.h>
+#include<iostream>
 
 class Ultrassom{
    private:
