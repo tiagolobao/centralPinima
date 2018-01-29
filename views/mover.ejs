@@ -161,17 +161,16 @@
 		<main>
 		  <!-- <section> -->
 		    <div class="wrapper">
-		    <div class="kachel">
-
+		    <div id="frente" class="kachel">
 		        <h4>Seguir</h4>
 		    </div>
-		      <div id="mover" class="kachel">
+		      <div id="esquerda" class="kachel">
 		          <h4>Virar Esquerda</h4>
 		        </div>
-		      <div class="kachel">
+		      <div  id="direita" class="kachel">
 		          <h4>Virar Direita</h4>
 		      </div>
-		      <div class="kachel">
+		      <div  id="parar" class="kachel">
 		          <h4>Parar</h4>
 		      </div>
 		    </div>
@@ -184,16 +183,16 @@
 			  crossorigin="anonymous"></script>
 	<script>
 		jQuery("#esquerda").on("click", function(){
-			window.location.href = "/mover";
+			window.location.href = "/mover/?command='esquerda'";
 		});
 		jQuery("#direita").on("click", function(){
-			window.location.href = "/mover";
+			window.location.href = "/mover/?command='direita'";
 		});
 		jQuery("#frente").on("click", function(){
-			window.location.href = "/mover";
+			window.location.href = "/mover/?command='frente'";
 		});
 		jQuery("#parar").on("click", function(){
-			window.location.href = "/mover";
+			window.location.href = "/mover/?command='parar'";
 		});
 
 
