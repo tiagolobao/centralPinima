@@ -3,7 +3,7 @@
 
 all: main
 
-main: comandos.o motor/motor.o ultrassom/ultrassom.o
+main: comandos.o motor.o ultrassom.o
 	g++ -o $@ $^ main -lwiringPi
 
 clean:
