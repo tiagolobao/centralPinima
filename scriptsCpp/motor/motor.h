@@ -2,7 +2,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<fstream>
-#include<string>
+#include<string.h>
 
 class Motor{
    private:
