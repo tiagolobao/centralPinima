@@ -68,6 +68,8 @@ void WritePin(int GPIO, int value){
 }
 
 int ReadPin(int GPIO){
+   FILE *fp;
+   char path[3];
    char temp[25] = "gpio read ";
    char buff[5];
 
