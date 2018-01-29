@@ -9,7 +9,7 @@ class Motor{
    int direitaAntiHorario;
 
    public:
-   Motor(int esquerdaHorario, int esquerdaAntiHorario, int direitaHorario, int direitaAntiHorario);
+   void Motor(int esquerdaHorario, int esquerdaAntiHorario, int direitaHorario, int direitaAntiHorario);
    void irParaFrente();
    void irParaTras();
    void virarDireita();
