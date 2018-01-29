@@ -1,6 +1,6 @@
-#include "motor/motor.h"
-#include "ultrassom/ultrassom.h"
-#include <iostream>
+#include</home/pi/centralpinima/scriptsCpp/motor/motor.h>
+#include</home/pi/centralpinima/scriptsCpp/ultrassom/ultrassom.h>
+#include<iostream>
 
 using namespace std;
 
