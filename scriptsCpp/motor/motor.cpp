@@ -52,7 +52,7 @@ void Motor::parar(){
 
 
 /* COMANDOS DE GPIO */
-void WritePin(int GPIO, int value){
+void Motor::WritePin(int GPIO, int value){
    char temp[25] = "gpio write ";
    char buff[5];
 
@@ -67,7 +67,7 @@ void WritePin(int GPIO, int value){
    system( temp );
 }
 
-int ReadPin(int GPIO){
+int Motor::ReadPin(int GPIO){
    FILE *fp;
    char path[3];
    char temp[25] = "gpio read ";

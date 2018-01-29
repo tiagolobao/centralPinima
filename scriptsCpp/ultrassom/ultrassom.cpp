@@ -37,7 +37,7 @@ double Ultrassom::getDistancia(){
 
 
 /* COMANDOS DE GPIO */
-void WritePin(int GPIO, int value){
+void Ultrassom::WritePin(int GPIO, int value){
    char temp[25] = "gpio write ";
    char buff[5];
 
@@ -52,7 +52,7 @@ void WritePin(int GPIO, int value){
    system( temp );
 }
 
-int ReadPin(int GPIO){
+int Ultrassom::ReadPin(int GPIO){
    FILE *fp;
    char path[3];
    char temp[25] = "gpio read ";
